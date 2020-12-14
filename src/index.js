@@ -1,8 +1,6 @@
-import { kelvinToFahrenheit, kelvinToCelsius } from './modules/temperatureConversion.js';
 import { displayData } from './modules/displayData.js';
 import { getWeatherData } from './modules/weatherAPI.js';
 
-const submitButton = document.querySelector('[data-submit-button]');
 const form = document.querySelector('[data-input-form]');
 const locationInput = document.querySelector('[data-location-input]');
 
@@ -24,3 +22,8 @@ locationInput.addEventListener('input', () => {
 	locationInput.classList.remove('invalid');
 	locationInput.setAttribute('placeholder', 'search location');
 });
+
+(async function () {
+	const data = await getWeatherData('Seattle');
+	displayData(data);
+})();

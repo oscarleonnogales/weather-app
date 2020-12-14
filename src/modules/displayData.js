@@ -16,7 +16,7 @@ export function displayData(data) {
 function displayLocation(location) {
 	var locationString;
 	if (location.country === 'United States of America') {
-		locationString = `${location.name}, ${location.region.substring(0, 2).toUpperCase()}`;
+		locationString = `${location.name}, ${location.region}`;
 	} else {
 		locationString = `${location.name}, ${location.country}`;
 	}
