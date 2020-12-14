@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: sans-serif;
+	color: rgb(226, 226, 226);
+	font-size: 1.2rem;
+}
+
+body {
+	background: url('./background.jpeg');
+	background-size: cover;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 10% auto;
+	width: 40%;
+}
+
+.weather-details {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.submit-button {
+	cursor: pointer;
+}
+
+.location-input {
+	text-align: left;
+	background: rgba(255, 255, 255, 0.1);
+	outline: none;
+	font-size: 0.9rem;
+	padding: 0.5em;
+}
+
+.location-input.invalid {
+	color: red;
+	border: 1px solid red;
+}
+
+.input-form {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.location {
+	font-size: 2.5rem;
+}
+
+.temperature {
+	font-size: 3.5rem;
+	margin-top: 25px;
+}
+
+.weather-description {
+	font-size: 1.8rem;
+	margin-bottom: 50px;
+}
+
+.wind,
+.feels-like,
+.humidity {
+	font-size: 1.5rem;
+}
+
+.weather-detail {
+	font-size: 1rem;
+}
