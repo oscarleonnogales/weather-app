@@ -11,7 +11,6 @@ form.addEventListener('submit', async (e) => {
 		const data = await getWeatherData(location);
 		displayData(data);
 	} catch (err) {
-		//display a pseudoelement saying the location wasn't valid
 		locationInput.classList.add('invalid');
 		locationInput.setAttribute('placeholder', 'invalid location');
 	}
@@ -23,7 +22,4 @@ locationInput.addEventListener('input', () => {
 	locationInput.setAttribute('placeholder', 'search location');
 });
 
-(async function () {
-	const data = await getWeatherData('Seattle');
-	displayData(data);
-})();
+getWeatherData('Seattle').then((data) => displayData(data));
