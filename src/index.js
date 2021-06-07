@@ -1,5 +1,6 @@
 import { displayData } from './modules/displayData.js';
 import { getWeatherData } from './modules/weatherAPI.js';
+import './stylesheets/styles.css';
 
 const form = document.querySelector('[data-input-form]');
 const locationInput = document.querySelector('[data-location-input]');
