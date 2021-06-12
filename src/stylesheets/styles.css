@@ -8,10 +8,12 @@
 	font-family: sans-serif;
 	color: rgb(226, 226, 226);
 	font-size: 1.2rem;
+	text-shadow: black 1px 0 1px;
 }
 
 body {
-	background: url('../images/background.jpeg');
+	background: url('../images/night-background.jpg');
+	height: 100vh;
 	background-size: cover;
 }
 
@@ -27,31 +29,14 @@ body {
 	justify-content: space-evenly;
 }
 
-.submit-button {
-	cursor: pointer;
-}
-
-.location-input {
-	text-align: left;
-	background: rgba(255, 255, 255, 0.1);
-	outline: none;
-	font-size: 0.9rem;
-	padding: 0.5em;
-}
-
-.location-input.invalid {
-	color: red;
-	border: 1px solid red;
-}
-
 .input-form {
 	position: absolute;
 	top: 15px;
-	right: 15px;
+	left: 15px;
 }
 
 .location {
-	font-size: 2.5rem;
+	font-size: 3.5rem;
 }
 
 .temperature {
@@ -60,16 +45,45 @@ body {
 }
 
 .weather-description {
-	font-size: 1.8rem;
+	font-size: 2.2rem;
 	margin-bottom: 50px;
 }
 
 .wind,
 .feels-like,
 .humidity {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 .weather-detail {
+	font-size: 1.5rem;
+}
+
+.input-form__input {
+	text-align: left;
+	position: relative;
+	height: 2rem;
+	width: 12.5rem;
+	border: 1px solid hsl(220, 9%, 87%);
+	border-radius: 0.5rem;
+	outline: none;
+	background: none;
 	font-size: 1rem;
+	padding: 1rem;
+	z-index: 1;
+	transition: 0.3s ease-in;
+	text-shadow: none !important;
+}
+
+.input-form__input:focus,
+.input-form__input:hover {
+	border-color: hsl(214, 82%, 51%);
+}
+
+.input-form__input.invalid {
+	border-color: red !important;
+}
+
+.input-form__input.invalid::placeholder {
+	color: hsl(0, 100%, 70%);
 }

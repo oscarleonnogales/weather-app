@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
 		const location = locationInput.value;
 		const data = await getWeatherData(location);
 		displayData(data);
-	} catch (err) {
+	} catch (error) {
 		locationInput.classList.add('invalid');
 		locationInput.setAttribute('placeholder', 'invalid location');
 	}
